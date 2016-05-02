@@ -11,15 +11,23 @@ void setup() {
 void draw() {
 
   background( 20, 255, 150);
-   fill(0);
-   float x = 200, y = 20;
+  fill(0);
+  float x = 200, y = 20;
   for ( int i = 0; i < max; i++) {
- text(lex[i], x, y);
- y = y + 12;
+    text(lex[i], x, y);
+    y = y + 12;
   }
 }
-  void reset() {
-    for ( int i = 0; i < max; i++) {
-      lex[i] = random(0, 2000);
-    }
+void reset() {
+  for ( int i = 0; i < max; i++) {
+    lex[i] = random(0, 2000);
   }
+}
+
+void keyPressed() {
+  // Handle keys //
+  if (key == 'q') exit();
+  if (key == 'r') reset();
+  if (key == 'b') big();  
+  if (key == 's') small();  
+}
