@@ -1,3 +1,8 @@
+//Alexander Dumervil
+//Project 4
+string title = "Project 4";
+string author = " Alexander Dumervil";
+
 
 int max = 20;
 float lex[] = new float [ max ];
@@ -17,6 +22,8 @@ void draw() {
     text(lex[i], x, y);
     y = y + 12;
   }
+  text( title, width/2, 20);
+  text(author, width-200, height-20);
 }
 void reset() {
   for ( int i = 0; i < max; i++) {
